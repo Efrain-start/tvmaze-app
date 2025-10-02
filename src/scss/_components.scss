@@ -1,0 +1,35 @@
+.card {
+  background: var(--card);
+  border: 1px solid #1f2937;
+  border-radius: $radius;
+  box-shadow: $shadow;
+  padding: 16px;
+}
+
+.grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+
+.search {
+  display:flex; gap:10px; margin-bottom:16px;
+  input {
+    flex:1; padding:10px 12px; border-radius:$radius; border:1px solid #334155; background:#0b1220; color:var(--text);
+  }
+  button {
+    padding:10px 14px; border:0; border-radius:$radius; background:var(--accent); color:#0b1220; font-weight:600; cursor:pointer;
+  }
+}
+
+.badge { display:inline-block; padding:4px 8px; border-radius:999px; background:#0b1220; border:1px solid #334155; color:var(--muted); }
+
+.media {
+  display:flex; gap:12px;
+  img { width:120px; height:160px; object-fit:cover; border-radius:$radius; background:#0b1220; }
+}
+
+.empty, .error, .loading { text-align:center; color:var(--muted); padding:24px; }
+.error { color: var(--error); }
+.loading::after { content:" Cargando…"; }
+

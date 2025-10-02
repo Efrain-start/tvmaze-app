@@ -1,0 +1,145 @@
+@charset "UTF-8";
+:root {
+  --bg: #0f172a;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+  --card: #111827;
+  --accent: #60a5fa;
+  --ok: #22c55e;
+  --error: #ef4444;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, Segoe UI, Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.site-header {
+  background: #0b1220;
+  border-bottom: 1px solid #1f2937;
+}
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+}
+.site-header h1 a {
+  color: var(--text);
+  text-decoration: none;
+}
+.site-header .nav {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  padding: 0;
+  margin: 0;
+}
+.site-header .nav a {
+  color: var(--muted);
+  text-decoration: none;
+}
+.site-header .nav a:hover {
+  color: var(--text);
+}
+
+.site-main {
+  padding: 24px 0 64px;
+}
+
+.site-footer {
+  border-top: 1px solid #1f2937;
+}
+.site-footer .container {
+  padding: 16px;
+  color: var(--muted);
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid #1f2937;
+  border-radius: 14px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+  padding: 16px;
+}
+
+.grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+
+.search {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.search input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid #334155;
+  background: #0b1220;
+  color: var(--text);
+}
+.search button {
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 14px;
+  background: var(--accent);
+  color: #0b1220;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #0b1220;
+  border: 1px solid #334155;
+  color: var(--muted);
+}
+
+.media {
+  display: flex;
+  gap: 12px;
+}
+.media img {
+  width: 120px;
+  height: 160px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 14px;
+  background: #0b1220;
+}
+
+.empty, .error, .loading {
+  text-align: center;
+  color: var(--muted);
+  padding: 24px;
+}
+
+.error {
+  color: var(--error);
+}
+
+.loading::after {
+  content: " Cargando…";
+}/*# sourceMappingURL=styles.css.map */
